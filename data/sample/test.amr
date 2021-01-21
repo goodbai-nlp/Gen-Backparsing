@@ -1,0 +1,10 @@
+person :arg0-of ( have-rel-role :arg1 bitch :arg2 son )
+and :op1 international :op2 ( government-organization :arg0-of govern ) :op3 technology :op4 military :op5 space :op6 ( person :arg0-of lead )
+order :arg1 ( transport :arg1 cocaine :arg0-of ( cover-up :arg1 ( person :arg0-of ( have-org-role :arg2 agent ) ) ) ) :mod also :mod additional
+say :arg0 i :arg1 ( bring :arg0 ( militarism :poss ( country :name ( name :op1 japan ) ) ) :arg1 ( disaster :mod grave ) :arg2 ( person :mod ( continent :name ( name :op1 asia ) ) ) ) :arg2 ( citizen :mod fellow :poss i )
+multi-sentence :snt1 hello :snt2 ( girl :age ( temporal-quantity :quant 12 :unit year :arg1-of ( mean :arg2 ( age :arg2 ( temporal-quantity :quant 13 :unit year ) :time ( after :op1 now :quant ( temporal-quantity :quant 2 :unit day ) ) ) ) ) :arg1-of ( addict :arg2 ( harm :arg1 self ) ) :domain i )
+seem :arg1 ( have-purpose :arg1 road :arg2 ( facilitate :arg0 road :arg1 ( interest :arg1 public :arg2 ( and :op1 ( get :arg0 public :arg2 ( business :arg1-of private ) ) :op2 ( get :arg0 public :source business ) ) ) ) :mod whole ) :arg2 i
+byline :arg0 ( publication :name ( name :op1 xinhua :op2 news :op3 agency ) ) :location ( city :name ( name :op1 beijing ) ) :time ( date-entity :month 9 :day 1 )
+succumb :polarity - :arg0 ( country :name ( name :op1 iran ) ) :arg1 ( pressure :arg2 ( curb :arg1 ( project :mod nucleus :poss country ) ) :mod international )
+and :op1 ( change :arg0 it :arg1 ( pattern :mod develop ) :arg1-of ( cause :arg0 ( worsen :arg1 pattern ) ) ) :op2 ( cause :arg0 it :arg1 ( congest :arg1 ( around :op1 ( exit :poss it ) ) :arg2 traffic :arg1-of localize ) ) :time already
+impose :arg0 ( government-organization :arg0-of ( govern :arg1 ( country :name ( name :op1 south :op2 africa ) ) ) ) :arg1 ( ban :arg0-of ( prohibit :arg1 ( recruit :arg1 ( person :location-of ( or :op1 ( inside :op1 country ) :op2 ( outside :op1 country ) ) ) :arg2 ( or :op1 mercenary :op2 ( assist :arg1 ( military :mod foreign ) ) ) ) ) )

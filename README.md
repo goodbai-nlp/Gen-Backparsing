@@ -19,3 +19,21 @@ bash ./src/train-LDC2017.sh
 bash ./src/translate-LDC15.sh
 bash ./src/translate-LDC17.sh
 ```
+
+#References
+```
+@inproceedings{bai-etal-2020-online,
+    title = "Online Back-Parsing for {AMR}-to-Text Generation",
+    author = "Bai, Xuefeng  and
+      Song, Linfeng  and
+      Zhang, Yue",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.92",
+    doi = "10.18653/v1/2020.emnlp-main.92",
+    pages = "1206--1219",
+}
+```

@@ -1,0 +1,10 @@
+or :mode interrogative :op1 ( do :arg0 anyone :arg1 one :mod actual ) :op2 ( think :arg0 anyone :arg1 ( do :arg0 anyone :arg1 one ) )
+record :arg0 ( person :arg0-of ( have-rel-role :arg1 i :arg2 friend ) ) :arg1 song :beneficiary i
+find-out :arg0 we :arg1 this :time ( about :time ( date-entity :day 23 :month 12 :year 2009 :time 19:30 ) ) :time-of ( phone :arg0 ( person :arg0-of ( have-rel-role :arg1 she :arg2 mum ) ) :arg1 she :arg2 ( say :arg0 person :arg1 ( and :op1 ( be-located-at :arg1 ( person :arg0-of ( have-rel-role :arg1 person :arg2 husband ) ) :arg2 ( back :op1 house ) ) :op2 ( want :arg0 person :arg1 ( talk :arg0 person :arg1 event ) ) ) ) )
+and :op1 ( sell :arg0 ( person :name ( name :op1 blair ) ) :arg1 gun :arg2 ( person :name ( name :op1 gaddafi ) ) ) :op2 ( help :arg0 ( person :name ( name :op1 cameron ) ) :arg1 ( oust :arg1 person ) ) :arg0-of ( cause :arg1 ( possible :polarity - :arg1 ( look :arg0 you :arg1 ( or :op1 ( bind :arg1 person :arg2 thing ) :op2 ( responsible :arg0 person :arg1 ( thing :arg1-of ( act :arg0 person ) ) ) ) ) ) )
+disfigure :arg1 ( site :part-of ( center :name ( name :op1 bhabha :op2 atomic ) :location-of ( research :arg1 nucleus ) :mod premier :poss ( country :name ( name :op1 india ) ) ) )
+and :op1 international :op2 money :op3 terrorism :op4 crime :op5 business
+include :arg1 ( and :op1 ( launder :arg0 person :arg1 money ) :op2 terrorism ) :arg2 ( thing :arg2-of ( charge :arg1 ( person :arg0-of ( have-org-role :arg1 ( organization :name ( name :op1 muslim :op2 brotherhood ) ) :arg2 member ) ) ) )
+reveal :arg1 ( fund :arg0 ( person :arg0-of rob ) :arg1 ( person :mod ( country :name ( name :op1 kurdistan ) ) :location ( country :name ( name :op1 iraq ) ) :arg0-of rebel ) ) :mod also
+have-org-role :arg0 ( country :name ( name :op1 china ) ) :arg1 ( club :mod ( missile :mod ballistic ) ) :arg2 member
+say :arg0 ( person :name ( name :op1 junichiro :op2 koizumi ) :arg0-of ( have-org-role :arg1 ( country :name ( name :op1 japan ) ) :arg2 ( minister :mod prime ) ) ) :arg1 ( shift :arg1 rod :mod proactive )
