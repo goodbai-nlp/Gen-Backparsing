@@ -1,0 +1,10 @@
++:ARG0 +:EOS +:EOS +:EOS -:ARG0 -:mod -:ARG1 -:op2 -:op1 +:EOS -:ARG0 +:op2 +:EOS +:EOS +:EOS +:ARG1 -:ARG0 +:ARG1 -:ARG1 +:mode
++:EOS +:EOS +:sub +:EOS +:ARG1 +:EOS +:beneficiary +:EOS
+-:ARG0 +:ARG1 -:ARG0 -:ARG1 +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:time +:time +:EOS +:sub +:sub +:EOS +:EOS +:EOS +:time-of +:time-of -:ARG1 +:sub +:ARG1 +:EOS +:ARG2 +:EOS +:EOS +:EOS +:ARG2 +:ARG2 +:EOS +:EOS +:op1 -:op1 +:ARG1 -:op1 +:op2 +:EOS +:ARG1 +:time +:time +:EOS +:EOS +:EOS
++:EOS +:ARG1 +:EOS +:EOS -:op1 +:EOS +:op2 +:ARG1 +:sub +:ARG1 +:EOS +:EOS +:EOS +:polarity -:ARG0 +:ARG1 +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS -:ARG1 +:ARG1 -:op1 +:op2 +:EOS +:EOS +:ARG2 +:ARG1 +:EOS +:ARG0
++:EOS +:EOS +:EOS -:ARG1 -:mod -:location-of +:EOS +:sub +:sub +:EOS +:EOS +:sub +:sub -:mod -:location-of -:part-of -:part-of +:EOS +:EOS +:sub -:ARG1 +:sub +:EOS
++:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS
++:EOS +:EOS +:EOS -:ARG2 +:EOS +:EOS +:EOS -:ARG2 +:EOS -:ARG1 +:ARG1 -:op1 +:op2 +:EOS
++:EOS +:EOS -:mod +:EOS +:EOS +:EOS +:sub +:EOS +:ARG1 -:ARG0 +:EOS +:sub +:ARG1 +:EOS +:EOS +:EOS
++:EOS +:EOS +:ARG2 -:ARG2 +:EOS +:EOS -:mod +:ARG1 +:ARG1 -:mod +:EOS
++:EOS -:mod +:EOS +:sub +:EOS +:EOS +:EOS +:ARG1 +:EOS +:EOS +:ARG1 +:EOS +:mod +:EOS

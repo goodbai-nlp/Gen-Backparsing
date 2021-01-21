@@ -1,0 +1,10 @@
++:sub +:sub +:sub +:EOS +:EOS +:EOS +:sub +:sub +:EOS +:EOS +:EOS -:op1 +:EOS +:EOS +:EOS +:op2 -:time -:ARG3 +:ARG0 +:ARG0 +:ARG0 +:ARG0 +:ARG0 +:ARG0 +:ARG0 +:ARG0 +:ARG0 +:EOS
++:EOS -:poss +:sub +:EOS -:ARG0 +:topic +:ARG1 +:EOS +:EOS +:EOS -:domain -:degree -:ARG0 +:EOS +:ARG1 -:mod +:EOS +:EOS -:ARG1 -:ARG0 +:EOS
++:EOS +:EOS -:ARG0 +:sub +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:ARG0 -:time +:EOS +:EOS +:EOS +:EOS +:sub +:sub +:ARG1 +:sub -:ARG1-of +:sub +:EOS +:EOS +:EOS +:EOS +:domain -:ARG0 +:domain -:ARG0 +:EOS +:ARG2 +:ARG2 +:EOS +:ARG1 +:ARG1 -:ARG1 +:EOS
++:EOS +:EOS -:ARG1 +:EOS +:EOS +:EOS +:EOS +:EOS
++:sub +:EOS +:EOS +:EOS +:sub +:sub +:EOS +:sub +:sub +:EOS +:sub +:EOS +:EOS +:sub -:ARG2 +:EOS +:EOS +:EOS +:EOS +:EOS +:sub +:EOS -:ARG1-of +:ARG1 +:ARG1 -:ARG1 +:sub +:direction +:mod +:time +:EOS +:op1 -:ARG1 +:sub +:direction +:EOS +:ARG1-of +:EOS +:EOS +:ARG0 -:time +:sub +:EOS +:EOS +:EOS +:EOS +:EOS +:ARG1 -:duration -:mod +:EOS
++:EOS +:EOS +:EOS +:EOS +:EOS +:EOS
++:EOS +:EOS -:ARG0 +:EOS +:ARG1 -:op1 +:op2 +:EOS +:EOS +:EOS +:prep-for +:prep-for -:mod +:EOS
++:EOS +:EOS +:EOS +:EOS +:EOS +:ARG1 -:ARG0 +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:EOS +:op2 -:mod +:EOS +:EOS +:EOS +:EOS +:poss +:EOS +:sub +:sub +:sub +:op2 +:EOS +:EOS +:EOS +:EOS +:sub -:ARG1 +:sub -:op1 +:EOS +:op2 -:ARG1-of +:sub +:op2 -:ARG1-of +:EOS +:EOS +:EOS +:ARG1 +:ARG1 -:mod +:EOS +:EOS +:EOS +:ARG1 -:manner -:ARG1 -:mod +:EOS
++:EOS +:EOS +:EOS +:EOS +:sub +:sub +:sub -:mod +:EOS +:EOS +:instrument-of -:ARG0 +:EOS +:EOS +:sub +:EOS +:ARG1 +:EOS +:EOS +:ARG2 -:prep-as -:ARG1 -:mod +:EOS
++:sub +:EOS +:sub +:sub +:sub +:EOS +:EOS +:EOS +:EOS +:EOS -:part-of +:EOS +:EOS +:sub -:part-of +:sub +:EOS +:ARG1 -:ARG1 -:ARG2 -:degree +:sub +:EOS +:EOS +:EOS +:time +:EOS +:ARG0-of +:EOS +:EOS -:degree +:EOS +:EOS +:EOS +:sub +:EOS +:ARG1 -:mod -:ARG0 +:EOS +:EOS +:ARG1 -:mod +:EOS +:EOS +:EOS +:EOS +:mod +:EOS +:EOS
