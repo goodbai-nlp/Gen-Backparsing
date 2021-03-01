@@ -1,12 +1,12 @@
 #!/bin/bash
-base_dir=/nfs/Desktop/AMR2Text
-model=post7
-train_test_data_dir=$base_dir/AMRdata/LDC2017-$model
+BASE=$(dirname $(pwd))
+cate=LDC2015
+cate=LDC2017
+train_test_data_dir=$BASE/data/$cate
 
-data_dir="./workspace/LDC2017-20000-50-5000-${model}/"
-data_dir="./workspace/LDC2017-10000-60-5000-${model}/"
+data_dir="./workspace/$cate-10000-60-5000/"
 if [ ! -d "$data_dir" ]; then mkdir -p "$data_dir"; fi
-data_prefix="$data_dir/LDC2017-$model"
+data_prefix="$data_dir/$cate"
 
 python3 ./preprocess.py -train_src $train_test_data_dir/train.concept.bpe \
                         -train_tgt $train_test_data_dir/train.tok.sent.bpe \
@@ -30,4 +30,3 @@ python3 ./preprocess.py -train_src $train_test_data_dir/train.concept.bpe \
                         -src_seq_length 10000 \
                         -tgt_seq_length 10000 \
                         -share_vocab
-

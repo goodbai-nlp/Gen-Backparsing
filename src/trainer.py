@@ -70,8 +70,6 @@ def build_trainer(opt, device_id, model, fields, optim, model_saver=None):
         integrated=integrated,
         integrated_mode=integrated_mode,
         attn_smoothing=attn_smoothing,
-        use_0=opt.use_0,
-        use_gumbel=opt.use_gumbel,
     )
     return trainer
 
@@ -118,8 +116,6 @@ class Trainer(object):
         integrated=False,
         integrated_mode="add",
         attn_smoothing="-1e5",
-        use_0=False,
-        use_gumbel=False,
     ):
         # Basic attributes.
         self.model = model
@@ -138,9 +134,7 @@ class Trainer(object):
         self.model_saver = model_saver
         self.integrated = integrated
         self.attn_smoothing = attn_smoothing
-        self.use_0 = use_0
-        self.use_gumbel = use_gumbel
-
+        
         assert grad_accum_count > 0
         if grad_accum_count > 1:
             assert (
@@ -325,7 +319,7 @@ class Trainer(object):
             #     align = None
 
             outputs, attns = self.model(
-                src, tgt, structure, None, None, src_lengths, self.use_0, None, None
+                src, tgt, structure, None, None, src_lengths, None, None
             )
 
             # Compute loss.
@@ -400,7 +394,7 @@ class Trainer(object):
             align_mask = align - 2
 
             """ soft attn
-            # align[align<=0] = -1e10     # can be tuned
+            # align[align<=0] = -1e10     # can be changed
             # softmax = torch.nn.Softmax(dim=-1)
             # align = softmax(align.float())
             """
@@ -428,7 +422,6 @@ class Trainer(object):
                         mask,
                         align_gold,
                         src_lengths,
-                        self.use_0,
                         arc_attn,
                         relation_mat,
                     )
@@ -443,7 +436,6 @@ class Trainer(object):
                         mask,
                         align if ratio_beta > 0 else None,
                         src_lengths,
-                        self.use_0,
                         arc_attn if ratio_alpha > 0 else None,
                         relation_mat if ratio_alpha > 0 else None,
                     )
@@ -606,11 +598,10 @@ def my_cross_entropy(input, target, reduce="mean", use_onehot=False):
     loss_func = torch.nn.LogSoftmax(dim=-1)
     nll_input = loss_func(input)
 
-    # attn_loss_cross_entropy = torch.mean(torch.sum(-(tgt_vec*nll_input), dim=-1), dim=-1)       # 句子内部是mean
+    # attn_loss_cross_entropy = torch.mean(torch.sum(-(tgt_vec*nll_input), dim=-1), dim=-1)       # avg by sentence
     attn_loss_cross_entropy = torch.sum(
         torch.sum(-(tgt_vec * nll_input), dim=-1), dim=-1
-    )  # 句子内部是sum
-
+    )                                                                                             # sum tokens
     if reduce == "mean":  # batch 内部
         attn_loss = torch.mean(attn_loss_cross_entropy, dim=0)
         return attn_loss

@@ -36,7 +36,6 @@ class NMTModel(nn.Module):
         mask,
         align,
         lengths,
-        use_0=False,
         gold_arc_attn=None,
         relation_mat=None,
     ):
@@ -67,13 +66,10 @@ class NMTModel(nn.Module):
 
         if gold_arc_attn is not None and relation_mat is not None:
             # print("gold_arc_attn", gold_arc_attn.size(), gold_arc_attn.transpose(0,1)[:4,:,:5].size(),gold_arc_attn.transpose(0,1)[:4,:,:5]) # [bsz, tgt_len, tgt_len]
-
             emb_align_gold = (
                 self.decoder.embeddings(tgt[1:]).transpose(0, 1).contiguous()
             )       # [bsz, tgt_len, H_emb]
-            # emb_align_gold = (
-            #     self.decoder.embeddings.word_embedding(tgt[1:]).transpose(0, 1).contiguous()
-            # )       # [bsz, tgt_len, H_emb]
+            
             avg_hidden = torch.matmul(gold_arc_attn, emb_align_gold)  # [bsz, tgt_len, H_emb]
             padding = create_padding_variable((1, avg_hidden.size(0), avg_hidden.size(2)))
             avg_hidden_padded = torch.cat(
@@ -100,8 +96,6 @@ class NMTModel(nn.Module):
         dec_out, attns = self.decoder(
             tgt, align=align_vec_padded, arc_hidden=avg_hidden_padded, label_emb=avg_label_padded
         )
-
-        # dec_out, attns = self.decoder(tgt, align=align_vec_padded, arc_hidden=None, label_emb=avg_label_padded)
 
         if mask is not None:
             bi_out, label_out = self.biaffine(dec_out[:-1], mask)

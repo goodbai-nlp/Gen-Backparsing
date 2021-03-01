@@ -1,6 +1,5 @@
 #!/bin/bash
-setting=post2
-data_prefix="./workspace/LDC2015-10000-60-5000-$setting/LDC2015-$setting"
+data_prefix="./workspace/LDC2015-10000-60-5000/LDC2015"
 alpha=0.1
 beta=0.01
 nmt=1.0
@@ -9,8 +8,8 @@ adrop=0.1
 ldrop=0.4
 hdrop=0.5
 
-exp_id=integrated-catall-$adrop-$ldrop-$hdrop
-model_dir=./workspace/LDC2015-$setting-$alpha-$beta-$nmt-$exp_id/
+exp_id=integrated-$adrop-$ldrop-$hdrop-2080Ti
+model_dir=./workspace/LDC2015-$alpha-$beta-$nmt-$exp_id/
 
 if [ ! -d "$model_dir" ]; then mkdir -p "$model_dir"; fi
 CUDA_VISIBLE_DEVICES=0 nohup python3 -u ./train.py \
@@ -44,7 +43,6 @@ CUDA_VISIBLE_DEVICES=0 nohup python3 -u ./train.py \
                         -param_init 0.0 \
                         -param_init_glorot \
                         -valid_batch_size 8 \
-                        -use_0 \
                         -integrated \
                         -integrated_mode cat_all \
                         -a_drop $adrop \
@@ -53,4 +51,4 @@ CUDA_VISIBLE_DEVICES=0 nohup python3 -u ./train.py \
                         -ratio_alpha $alpha \
                         -ratio_beta $beta \
                         -ratio_nmt $nmt \
-                        >> LDC2015-10000-joint-integrated-$setting-$alpha-$beta-$nmt-$exp_id.log 2>&1 &
+                        > LDC2015-joint-integrated-$alpha-$beta-$nmt-$exp_id.log 2>&1 &

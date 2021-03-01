@@ -59,9 +59,6 @@ def model_opts(parser):
                        speech-to-text.""")
     group.add('--integrated', '-integrated', default=False, action='store_true', help="Whether use integrated mode or not")
     group.add('--integrated_mode', '-integrated_mode', type=str, default='add', help="Integrated mode (add, cat))")
-    group.add('--use_0', '-use_0', default=False, action='store_true', help="Whether use first or not")
-    group.add('--use_gumbel', '-use_gumbel', default=False, action='store_true', help="Whether use gumbel_softmax or not")
-
 
     # Attention options
     group = parser.add_argument_group('Model- Attention')
@@ -440,7 +437,7 @@ def translate_opts(parser):
     group.add('--length_penalty', '-length_penalty', default='none',
               choices=['none', 'wu', 'avg'],
               help="""Length Penalty to use.""")
-    group.add('--alpha', '-alpha', type=float, default=0.,
+    group.add('--alpha', '-alpha', type=float, default=0.6,
               help="""Google NMT length penalty parameter
                         (higher = longer generation)""")
     group.add('--beta', '-beta', type=float, default=-0.,

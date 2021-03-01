@@ -1,11 +1,12 @@
 #!/bin/bash
-base_dir=/home2/xfbai/mywork/AMR2Text/AMR-Backparsing/data
-model=post2
-train_test_data_dir=$base_dir/LDC2015-$model
+BASE=$(dirname $(pwd))
+cate=LDC2015
+cate=LDC2017
+train_test_data_dir=$BASE/data/$cate
 
-data_dir="./workspace/LDC2015-10000-60-5000-${model}/"
+data_dir="./workspace/$cate-10000-60-5000/"
 if [ ! -d "$data_dir" ]; then mkdir -p "$data_dir"; fi
-data_prefix="$data_dir/LDC2015-$model"
+data_prefix="$data_dir/$cate"
 
 python3 ./preprocess.py -train_src $train_test_data_dir/train.concept.bpe \
                         -train_tgt $train_test_data_dir/train.tok.sent.bpe \
@@ -29,4 +30,3 @@ python3 ./preprocess.py -train_src $train_test_data_dir/train.concept.bpe \
                         -src_seq_length 10000 \
                         -tgt_seq_length 10000 \
                         -share_vocab
-

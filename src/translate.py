@@ -8,7 +8,7 @@ import codecs
 from utils.logging import init_logger
 from inputters.dataset import make_text_iterator_from_file
 import onmt.opts as opts
-from onmt.translator2 import build_translator
+from onmt.translator import build_translator
 import json
 import torch
 import numpy as np
