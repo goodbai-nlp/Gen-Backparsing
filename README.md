@@ -6,7 +6,7 @@ An implementation for paper "Online Back-Parsing for AMR-To-Text Generation" (in
 + pytorch 1.0
 
 # Data Preprocessing
-We follow [this work](https://github.com/Amazing-J/structural-transformer) to preprocess AMR. Since AMR corpus has LDC license, we upload some examples for format reference. If you have the license, feel free to contact us for getting the preprocessed data.
+We follow [this work](https://github.com/Amazing-J/structural-transformer) to preprocess AMR. Since AMR corpus require LDC license, we upload some examples for format reference. If you have the license, feel free to contact us for getting the preprocessed data.
 
 # Runing
 ```

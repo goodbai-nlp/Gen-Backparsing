@@ -4,9 +4,9 @@ cate=test
 vocab_dir=LDC2017-10000-60-5000
 dev=0
 
-model_dir=./workspace/LDC2017-0.1-0.1-1.0-integrated-catall-0.5-0.5-0.5-2080Ti
-base_dir=/nfs/Desktop/AMR2Text
-train_test_data_dir=$base_dir/AMRdata/LDC2017
+model_dir=./workspace/LDC2017-0.1-0.1-1.0-integrated-0.5-0.5-0.5-2080Ti
+base_dir=../data
+train_test_data_dir=$base_dir/LDC2017
 model_file=$model_dir/_step_550000.pt
 reference=$train_test_data_dir/${cate}.sent
 output_dir=$model_dir/translate-result
@@ -24,7 +24,7 @@ CUDA_VISIBLE_DEVICES=$dev python3  ./translate.py -model  $model_file \
                                                  -batch_size 25 \
                                                  -share_vocab  \
                                                  -gpu 0 \
-                                                 -alpha 5.0 \
+                                                 -alpha 3.0 \
                                                  --integrated_node \
                                                  --integrated_edge \
 
