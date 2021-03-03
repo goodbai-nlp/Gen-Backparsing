@@ -14,13 +14,20 @@ bash ./src/train-LDC2015.sh
 bash ./src/train-LDC2017.sh
 ```
 
-#Evaluation
+# Evaluation
 ```
 bash ./src/translate-LDC15.sh
 bash ./src/translate-LDC17.sh
 ```
 
-#References
+# Results
+
+|Setting|  BLEU-tok  | BLEU-nltk  | Meteor | chrF++ |
+|  :----:  | :----:  |:---:|  :----:  | :----:  |
+| LDC15  | 31.58 | 32.27 | 36.38 | 65.33 |
+| LDC17  | 34.36 | 34.98 | 38.09 | 67.90 |
+
+# References
 ```
 @inproceedings{bai-etal-2020-online,
     title = "Online Back-Parsing for {AMR}-to-Text Generation",
